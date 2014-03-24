@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://10.129.4.237:8006/api2/json/nodes/proxmox2/qemu/113/config
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - PVEAuthCookie=PVE:testuser@pve:53307060::PNbY+ku1bx6SP1EMycRm7dRnLKGdzdjrpomJKMz0DidEvtIkV4eR7rqnQa89+DzvdkkhUanib8Jm8/7SuDNEz3obNKTDf2bxLHigACAiy3Ul7MTefLFHqGNUW0cwTreGm/wVXrAYQPHpZYehXw5q5ErPPczbElCYJ9oNVkic9xIdekAb8zE6cHecxi4k+YvDmpEm2ZHy7ZwHLsvliMvd1byvbP+P/GLdT2vDmYGG5fQZBp5mnDq5NSIBw5yrflvdkFrw4OpYccZe/1S+ozjALPlpjkf0ND+1NzK6tyMkv3ARlpvWDIeeZ/loERCPUdC2o8CVBg8nHY783564NPn76Q==
+      Csrfpreventiontoken:
+      - 53307060:heYGWCFOff2OgdzJb6xnf+MTKCg
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - max-age=0
+      Connection:
+      - Keep-Alive
+      - Keep-Alive
+      Date:
+      - Mon, 24 Mar 2014 17:50:31 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - pve-api-daemon/3.0
+      Content-Length:
+      - '316'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - Mon, 24 Mar 2014 17:50:31 GMT
+    body:
+      encoding: UTF-8
+      string: "{\"data\":{\"net0\":\"e1000=CA:EB:CB:18:AF:75,bridge=vmbr0\",\"ide2\":\"none,media=cdrom\",\"name\":\"test-api\",\"bootdisk\":\"virtio0\",\"virtio0\":\"servers:188/base-188-disk-1.qcow2/113/vm-113-disk-1.qcow2,format=qcow2,size=16G\",\"cores\":1,\"ostype\":\"l26\",\"memory\":2048,\"sockets\":1,\"digest\":\"2dab6a05e1915bc12eda39d38b856486518e70aa\"}}"
+    http_version: 
+  recorded_at: Mon, 24 Mar 2014 17:50:56 GMT
+recorded_with: VCR 2.8.0
