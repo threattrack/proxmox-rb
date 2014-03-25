@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'proxmox-rb'
-  s.version     = '0.0.3'
+  s.version     = '0.0.4'
   s.date        = '2014-03-24'
   s.summary     = "A library to interact with proxmox 3.x"
   s.description = "A library to interact with proxmox 3.x"
