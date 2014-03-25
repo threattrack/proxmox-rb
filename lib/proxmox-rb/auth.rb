@@ -2,14 +2,14 @@ module ProxmoxRb
   class Auth
     Ticket = Struct.new(:host, :ticket, :csrf)
     def self.get_ticket(host, username, password)
+      retry_count = 0
       auth = nil
       begin
         auth = JSON.parse(RestClient.post 'https://' + host + ':8006/api2/json/access/ticket',
                           { username: username, password: password })
       rescue => e
-        puts "#{e}"
-        sleep 1
-        retry
+        sleep_count += 1
+        retry if sleep_count < 5
       end
       ticket = auth['data']['ticket']
       csrf = auth['data']['CSRFPreventionToken']
