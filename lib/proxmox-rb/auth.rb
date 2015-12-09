@@ -8,8 +8,8 @@ module ProxmoxRb
         auth = JSON.parse(RestClient.post 'https://' + host + ':8006/api2/json/access/ticket',
                           { username: username, password: password })
       rescue => e
-        sleep_count += 1
-        retry if sleep_count < 5
+        retry_count += 1
+        retry if retry_count < 5
       end
       ticket = auth['data']['ticket']
       csrf = auth['data']['CSRFPreventionToken']
